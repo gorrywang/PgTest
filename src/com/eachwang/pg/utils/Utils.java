@@ -3,6 +3,9 @@ package com.eachwang.pg.utils;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+
 public abstract class Utils {
 	/**
 	 * 打印日志
@@ -28,4 +31,5 @@ public abstract class Utils {
 
 		return m.matches();
 	}
+
 }
