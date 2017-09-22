@@ -32,7 +32,8 @@ public class WebLoginServlet extends HttpServlet {
 		if ((password == null) || (username == null)) {
 			// *****缺少参数，请重新登录
 			// response.sendRedirect();
-			writer.print("请返回后完整填写");
+			request.setAttribute("msg", "请返回后完整填写");
+			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
 		}
 		// 获取用户实体
@@ -45,18 +46,20 @@ public class WebLoginServlet extends HttpServlet {
 		// 输出
 		if (user == null) {
 			// ******用户不存在
-			writer.print("用户不存在，请返回后完整填写");
+			request.setAttribute("msg", "用户不存在，请返回后完整填写");
+			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 		} else {
 			// ******登录成功
 			int vip = user.getVip();
 			if (vip == 1) {
-				Cookie cookie = new Cookie("username", user.getUsername());
-				cookie.setMaxAge(60 * 60 * 4);
+				Cookie cookie = new Cookie("username", user.getUuid());
+				// cookie.setMaxAge(60 * 60 * 4);
 				cookie.setPath(request.getContextPath() + "/");
 				response.addCookie(cookie);
 				response.sendRedirect(request.getContextPath() + "/index.jsp");
 			} else {
-				writer.print("该用户不是会员，禁止使用会员服务");
+				request.setAttribute("msg", "该用户不是会员，禁止使用会员服务");
+				request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			}
 		}
 	}

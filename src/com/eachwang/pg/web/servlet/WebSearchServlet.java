@@ -36,7 +36,8 @@ public class WebSearchServlet extends HttpServlet {
 		String search = request.getParameter("search");
 		if ((search == null)) {
 			// *****缺少参数，请重新登录
-			writer.print("请返回后完整填写");
+			request.setAttribute("msg", "请返回后完整填写");
+			request.getRequestDispatcher("/msg.jsp").forward(request, response);
 			return;
 		}
 		// 获取试题实体

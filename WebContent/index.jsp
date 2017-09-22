@@ -1,107 +1,72 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+
 <head>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta content="initial-scale=1, shrink-to-fit=no, width=device-width"
-	name="viewport">
-<!-- CSS -->
-<!-- Add Material font (Roboto) and Material icon as needed -->
-<link
-	href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i"
-	rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-	rel="stylesheet">
 <meta charset="utf-8" />
-<link href="css/material.min.css" rel="stylesheet">
-<script src="js/jquery-3.2.1.slim.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/material.min.js"></script>
 <title>易晨刷题助手</title>
 <link rel="icon" href="images/logo.png" type="image/x-icon" />
-
-
-		<style>
-			div#text {
-				color: #ffffff;
-				font-family: Monaco, monospace;
-				font-size: 24px;
-				width: 100%;
-				text-align: center;
-				position: absolute;
-				top: 75%;
-				left: 0px;
-				animation: 120ms infinite normal glitch;
-			}
-			
-			span {
-				animation: 1500ms infinite normal cursor;
-			}
-			
-			@keyframes glitch {
-				0% {
-					opacity: 0;
-					left: 0px;
-				}
-				40% {
-					opacity: 1;
-					left: -2px;
-				}
-				80% {
-					opacity: 1;
-					left: -2px;
-				}
-			}
-			
-			@keyframes cursor {
-				0% {
-					opacity: 0;
-					left: 0px;
-				}
-				40% {
-					opacity: 0;
-					left: -2px;
-				}
-				80% {
-					opacity: 1;
-					left: -2px;
-				}
-			}
-		</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </head>
 
-<body style="width: 100%; height: 100%; background-color: #424242;">
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand">YCPT</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#navbarNav" aria-controls="navbarNav"
-			aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+						aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">YCPT</a>
+				</div>
 
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item active"><a class="nav-link">主页<span
-						class="sr-only">(current)</span></a></li>
-				<li class="nav-item"><a class="nav-link"
-					href="${pageContext.request.contextPath}/login.jsp">登录</a></li>
-			</ul>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse"
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a>主页<span class="sr-only">(current)</span></a>
+						</li>
+						<li ><a href="${pageContext.request.contextPath}/login.jsp">登录</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<form class="navbar-form navbar-left"
+								action="${pageContext.request.contextPath}/webSearch"
+								method="post">
+								<div class="form-group">
+									<input name="search" type="text" class="form-control"
+										placeholder="请输入关键词">
+								</div>
+								<button type="submit" class="btn btn-default">搜索</button>
+							</form>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+
+	<div class="container">
+		<div class="jumbotron">
+			<h1>易晨刷题助手</h1>
+			<p>我</p>
+			<p>我们</p>
+			<p>助力鉴定考试</p>
+			<p>
+				<a class="btn btn-primary btn-lg" role="button"> 关于我们</a>
+			</p>
 		</div>
-		<form class="form-inline"
-			action="${pageContext.request.contextPath}/webSearch" method="post">
-			<input name="search" class="form-control mr-sm-2" type="search"
-				placeholder="请输入题目" aria-label="Search"> <input
-				type="submit" class="btn btn-outline-success my-2 my-sm-0"
-				value="搜索" />
-		</form>
-	</nav>
-	
-
-	<div id="text">
-		> 这里是易晨刷题助手网~<span id="cursor">█</span>
 	</div>
 </body>
 
