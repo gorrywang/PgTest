@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 
@@ -8,6 +9,20 @@
 <title>易晨刷题助手-登录</title>
 <link rel="icon" href="images/logo.png" type="image/x-icon" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<c:choose>
+	<c:when test="${result == 1 }">
+		<meta http-equiv="refresh"
+			content="3;${pageContext.request.contextPath }/login.jsp">
+	</c:when>
+	<c:when test="${result == 2 }">
+		<meta http-equiv="refresh"
+			content="3;${pageContext.request.contextPath }/index.jsp">
+	</c:when>
+	<c:when test="${result == 3 }">
+		<meta http-equiv="refresh"
+			content="3;${pageContext.request.contextPath }/index.jsp">
+	</c:when>
+</c:choose>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -36,20 +51,6 @@
 						<li><a href="${pageContext.request.contextPath}/index.jsp">主页
 								<span class="sr-only">(current)</span>
 						</a></li>
-						<li><a href="${pageContext.request.contextPath}/login.jsp">登录</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<form class="navbar-form navbar-left"
-								action="${pageContext.request.contextPath}/webSearch"
-								method="post">
-								<div class="form-group">
-									<input name="search" type="text" class="form-control"
-										placeholder="请输入关键词">
-								</div>
-								<button type="submit" class="btn btn-default">搜索</button>
-							</form>
-						</li>
 					</ul>
 				</div>
 			</div>
@@ -57,8 +58,9 @@
 	</div>
 	<div class="container">
 		<div class="jumbotron">
-			<h1>提示</h1>
+			<h2>提示</h2>
 			<p>${msg }</p>
+			<p>3秒后自动跳转, 请等待……</p>
 		</div>
 	</div>
 </body>

@@ -6,7 +6,7 @@
 
 <head>
 <meta charset="utf-8" />
-<title>易晨刷题助手-搜索</title>
+<title>易晨刷题助手-关于</title>
 <link rel="icon" href="images/logo.png" type="image/x-icon" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,9 +34,14 @@
 				<div class="collapse navbar-collapse"
 					id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li class="active"><a
-							href="${pageContext.request.contextPath}/index.jsp">主页 <span
-								class="sr-only">(current)</span></a></li>
+						<li><a href="${pageContext.request.contextPath}/index.jsp">主页<span class="sr-only">(current)</span></a></li>
+						<c:if test="${cookie.username == null }">
+							<li><a href="${pageContext.request.contextPath}/login.jsp">登录</a>
+							</li>
+						</c:if>
+						<c:if test="${cookie.username != null }">
+							<li><a>已经登录成功</a></li>
+						</c:if>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li>
@@ -57,21 +62,26 @@
 	</div>
 
 	<div class="container">
-		<table class="table table-striped">
-			<tr>
-				<th>#</th>
-				<th>搜索问题</th>
-				<th>正确答案</th>
-			</tr>
-			<c:forEach items="${test }" var="n" varStatus="cs">
-				<tr>
-					<th scope="row">${cs.index+1 }</th>
-					<td>${n.question }</td>
-					<td>${n.ok }</td>
-				</tr>
-			</c:forEach>
-		</table>
-	</div>
-</body>
+		<div class="jumbotron">
+			<h1>关于我们</h1>
+			<p>团队: 易晨团队</p>
+			<p>班级: D15联想一班</p>
+			<p>学校: 山东劳动职业技术学院</p>
+			<p>电邮: isreg@foxmail.com</p>
+			<p>
+				<a class="btn btn-info" href="https://weibo.com/wgr1997"
+					target="view_window">微博</a>
+				<a class="btn btn-info"
+					href="http://github.com/gorrywang" target="view_window">GitHub</a>
+				<a class="btn btn-info" href="http://blog.csdn.net/qq_26239671"
+					target="view_window">CSDN</a>
+				<a class="btn btn-info"
+					href="http://www.eachwang.com" target="view_window">易晨网</a>
+			</p>
 
+
+		</div>
+	</div>
+
+</body>
 </html>
