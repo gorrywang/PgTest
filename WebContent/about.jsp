@@ -34,7 +34,8 @@
 				<div class="collapse navbar-collapse"
 					id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a href="${pageContext.request.contextPath}/index.jsp">主页<span class="sr-only">(current)</span></a></li>
+						<li><a href="${pageContext.request.contextPath}/index.jsp">主页<span
+								class="sr-only">(current)</span></a></li>
 						<c:if test="${cookie.username == null }">
 							<li><a href="${pageContext.request.contextPath}/login.jsp">登录</a>
 							</li>
@@ -70,18 +71,25 @@
 			<p>电邮: isreg@foxmail.com</p>
 			<p>
 				<a class="btn btn-info" href="https://weibo.com/wgr1997"
-					target="view_window">微博</a>
-				<a class="btn btn-info"
+					target="view_window">微博</a> <a class="btn btn-info"
 					href="http://github.com/gorrywang" target="view_window">GitHub</a>
 				<a class="btn btn-info" href="http://blog.csdn.net/qq_26239671"
-					target="view_window">CSDN</a>
-				<a class="btn btn-info"
+					target="view_window">CSDN</a> <a class="btn btn-info"
 					href="http://www.eachwang.com" target="view_window">易晨网</a>
 			</p>
-
-
 		</div>
 	</div>
 
+	<div id="footer" class="container">
+		<nav class="navbar navbar-default">
+			<div class="navbar-inner navbar-content-center"
+				style="text-align: center">
+				<h5 class="text-muted credit" style="padding: 5px;">易晨网站 | 刷题助手
+					| 技术支持</h5>
+				<h5 class="text-muted credit" style="padding: 5px;">鲁ICP备17040550号-1</h5>
+				<h5 class="text-muted credit" style="padding: 5px;">&copy;2016-2017</h5>
+			</div>
+		</nav>
+	</div>
 </body>
 </html>

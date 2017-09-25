@@ -80,13 +80,21 @@
 	<div class="container">
 		<div class="jumbotron">
 			<h2>最新消息</h2>
-			<p>2017.9.24, 系统更新, 网站实行<a href="#show1">单点登录</a>, 请不要将账号密码给予别人</p>
+			<p>2017.9.25 , 开启随机50题与随机100题</p>
+			<p>2017.9.24 , 因某些人恶意刷排行榜, 暂时停止随机50题与随机100题</p>
+			<p>
+				2017.9.24, 系统更新, 网站实行<a href="#show1">单点登录</a>, 请不要将账号密码给予别人
+			</p>
 			<p>2017.9.23 晚上11点----2017.9.24 上午11点系统升级, 造成部分用户无法访问, 在此抱歉</p>
 			<p>2017.9.18, 新增20道2016年考试题目</p>
-			<p>2017.9.12, 开启网页版<a href="#vip">VIP服务</a></p>
+			<p>
+				2017.9.12, 开启网页版<a href="#vip">VIP服务</a>
+			</p>
 			<p>2017.9.12, 开启职业技能鉴定搜题网页服务</p>
 			<p>2017.9.06, 实行邮箱认证服务</p>
-			<p>2017.9.05, Android背诵及刷题服务开启: <a href="#app">Android YCPT</a></p>
+			<p>
+				2017.9.05, Android背诵及刷题服务开启: <a href="#app">Android YCPT</a>
+			</p>
 			<p>2017.9.04, 增加272道考试题目</p>
 		</div>
 	</div>
@@ -94,18 +102,24 @@
 	<div class="container">
 		<div class="jumbotron">
 			<h2 id="vip">关于会员</h2>
-			<p>网页不提供注册服务, 请使用<a href="#app">Android YCPT</a>进行注册</p>
-			<p><a href="#app">Android YCPT</a>可以进行背诵以及刷题, 网页版需要购买会员</p>
+			<p>
+				网页不提供注册服务, 请使用<a href="#app">Android YCPT</a>进行注册
+			</p>
+			<p>
+				<a href="#app">Android YCPT</a>可以进行背诵以及刷题, 网页版需要购买会员
+			</p>
 			<p>购买会员请发送您的联系方式到isreg@foxmail.com, 备注会员</p>
 			<p>会员价格: 2元</p>
 			<p>有效期: 购买日起至考试结束</p>
 		</div>
 	</div>
-	
+
 	<div class="container">
 		<div class="jumbotron">
 			<h2>热门下载</h2>
-			<a id="app" href="${pageContext.request.contextPath}/download/ycpt-1.0.0.0.apk">Android YCPT下载</a>
+			<a id="app"
+				href="${pageContext.request.contextPath}/download/ycpt-1.0.0.0.apk">Android
+				YCPT下载</a>
 		</div>
 	</div>
 	<div class="container">
@@ -113,6 +127,17 @@
 			<h2>名词解释</h2>
 			<p id="show1">单点登录: 即一个账号同一时间只能在一处登录</p>
 		</div>
+	</div>
+
+	<div id="footer" class="container">
+		<nav class="navbar navbar-default">
+			<div class="navbar-inner navbar-content-center"
+				style="text-align: center">
+				<h5 class="text-muted credit" style="padding: 5px;">易晨网站 | 刷题助手 | 技术支持</h5>
+				<h5 class="text-muted credit" style="padding: 5px;">鲁ICP备17040550号-1</h5>
+				<h5 class="text-muted credit" style="padding: 5px;">&copy;2016-2017</h5>
+			</div>
+		</nav>
 	</div>
 </body>
 </html>
