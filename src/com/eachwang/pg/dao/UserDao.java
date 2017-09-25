@@ -154,4 +154,42 @@ public class UserDao {
 		String sql = "update user set password = ? where uuid = ?";
 		return runner.update(sql, new Object[] { n, uuid });
 	}
+
+	/**
+	 * 充值VIP
+	 * 
+	 * @param email
+	 *            电子邮箱
+	 * @return
+	 * @throws SQLException
+	 */
+	public int vip(String email) throws SQLException {
+		QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
+		String sql = "update user set vip = 1 where email = ?";
+		return runner.update(sql, email);
+	}
+
+	/**
+	 * 取消联想一班会员
+	 * 
+	 * @return
+	 * @throws SQLException
+	 */
+	public int cancelLenovoOneVip() throws SQLException {
+		QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
+		String sql = "update user set vip = 0 where cla like ?";
+		return runner.update(sql, "%联想一班%");
+	}
+
+	/**
+	 * 恢复购买者会员
+	 * 
+	 * @return
+	 * @throws SQLException
+	 */
+	public int resetVip() throws SQLException {
+		QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
+		String sql = "update user set vip = 1 where cla like ?";
+		return runner.update(sql, "%购买%");
+	}
 }

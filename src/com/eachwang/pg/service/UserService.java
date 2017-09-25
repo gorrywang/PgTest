@@ -157,4 +157,35 @@ public class UserService {
 	private User checkOld(String uuid, String o) throws SQLException {
 		return new UserDao().checkOld(uuid, o);
 	}
+
+	/**
+	 * 充值VIP
+	 * 
+	 * @param email
+	 * @return
+	 * @throws SQLException
+	 */
+	public int vip(String email) throws SQLException {
+		return new UserDao().vip(email);
+	}
+
+	/**
+	 * 取消联想一班会员
+	 * 
+	 * @return 影响行数
+	 * @throws SQLException
+	 */
+	public int cancelLenovoOneVip() throws SQLException {
+		return new UserDao().cancelLenovoOneVip();
+	}
+
+	/**
+	 * 恢复购买者会员
+	 * 
+	 * @return
+	 * @throws SQLException
+	 */
+	public int resetVip() throws SQLException {
+		return new UserDao().resetVip();
+	}
 }

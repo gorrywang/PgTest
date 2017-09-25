@@ -22,6 +22,10 @@
 		<meta http-equiv="refresh"
 			content="3;${pageContext.request.contextPath }/index.jsp">
 	</c:when>
+	<c:when test="${result == 4 }">
+		<meta http-equiv="refresh"
+			content="3;${pageContext.request.contextPath }/admin/m.jsp">
+	</c:when>
 </c:choose>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script src="js/jquery-3.2.1.min.js"></script>

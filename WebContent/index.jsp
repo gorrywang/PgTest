@@ -76,6 +76,20 @@
 			</p>
 		</div>
 	</div>
+	
+	<div class="container">
+		<div class="jumbotron">
+			<h2>特别说明</h2>
+			<p>
+				全力助考, 从2017.9.25下午3:00起, 后台不会在做任何更新, 保证服务器平稳运行, 请<font color="#ff0000">会员用户</font>尝试登录自己的账号, 查看是否能登录
+			</p>
+			<p>
+				如若不能, 请<font color="#ff0000">会员用户</font>联系我: isreg@foxmail.com
+			</p>
+		</div>
+	</div>
+	
+	
 
 	<div class="container">
 		<div class="jumbotron">

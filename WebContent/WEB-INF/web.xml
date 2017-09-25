@@ -139,4 +139,44 @@
     <servlet-name>WebSearchServlet</servlet-name>
     <url-pattern>/webSearch</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegisterManagerServlet</display-name>
+    <servlet-name>RegisterManagerServlet</servlet-name>
+    <servlet-class>com.eachwang.pg.web.manager.servlet.RegisterManagerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterManagerServlet</servlet-name>
+    <url-pattern>/registerManager</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>VipManagerServlet</display-name>
+    <servlet-name>VipManagerServlet</servlet-name>
+    <servlet-class>com.eachwang.pg.web.manager.servlet.VipManagerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VipManagerServlet</servlet-name>
+    <url-pattern>/vipManager</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CancelManagerServlet</display-name>
+    <servlet-name>CancelManagerServlet</servlet-name>
+    <servlet-class>com.eachwang.pg.web.manager.servlet.CancelManagerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CancelManagerServlet</servlet-name>
+    <url-pattern>/cancelManager</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ReSetManagerServlet</display-name>
+    <servlet-name>ReSetManagerServlet</servlet-name>
+    <servlet-class>com.eachwang.pg.web.manager.servlet.ReSetManagerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReSetManagerServlet</servlet-name>
+    <url-pattern>/reSetManager</url-pattern>
+  </servlet-mapping>
 </web-app>
